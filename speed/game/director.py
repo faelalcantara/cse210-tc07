@@ -3,6 +3,8 @@ from game import constants
 from game.score import Score
 from game.words import Word
 from game.buffer import Buffer
+import sys
+import keyboard
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -44,6 +46,7 @@ class Director:
             self._do_updates()
             self._do_outputs()
             sleep(constants.FRAME_LENGTH)
+            self._end_game()
 
     def _get_inputs(self):
         """Gets the inputs at the beginning of each round of play. In this case,
@@ -93,3 +96,12 @@ class Director:
                 self._words.remove_word(count)
                 self._score.add_points(1)
                 self._words.new_word()
+
+    def _end_game(self):
+        # try:
+        #     if keyboard.is_pressed('Esc'):
+        #         print("\nyou pressed Esc, so exiting...")
+        #         sys.exit(0)
+        # except:
+        #     pass
+        pass

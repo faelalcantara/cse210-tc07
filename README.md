@@ -41,3 +41,4 @@ root                    (project root folder)
 ## Authors
 ---
 * Rafael Alcantara da Silva
+* Nacho Ampuero
